@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+nav {
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: black;
+  font-weight: 500;
+  width: 140px;
+  transition: all 1s ease;
+ 
+}
+
+li a:hover {
+  background-color: black;
+  color: white;
+  padding: 5px 1rem;
+  border-radius: 4px;
+}
+
+.image {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/images/background.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  background-color: black;
+  color: white;
+  padding: 5px 1rem;
+  border-radius: 4px;
+}
+
+.fa-solid,
+.fa-bars {
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    background-color: whitesmoke;
+    position: fixed;
+    padding: 10px;
+  }
+
+  ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: none;
+    row-gap: 2rem;
+  }
+
+  ul li {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .fa-solid,
+  .fa-bars {
+    opacity: 1;
+  }
+}
+
+.show-menu {
+  display: flex;
+}
